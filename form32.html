@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bug Report</title>
+	
+
+	<style type="text/css">
+
+		body{
+			border: 10px solid transparent;
+
+		}
+
+		#header1{
+			float: left;
+			font-size: 20px;
+
+		}
+
+		.aqua
+		{
+			color: #1abc9c;
+
+		}
+
+		span {
+			float: right;
+		}
+
+		input {
+			width :100%;
+			height: 25px;
+			border-radius: 3px;
+			margin: 5px;
+			margin-left: 0px;
+		}
+
+		form {
+			width: 65%;
+			
+			border: thin silver solid;
+			border-radius: 7px;
+			margin-left: 200px;
+			margin-top: 40px;
+
+		}
+		#bug {
+			background-color:#bcc3ca;
+			color: #ffffff;
+			border-radius: 6px;
+			height: 47px;
+			
+		}
+
+		#bug h2{
+			margin-top: 0;
+		}
+
+		#sendbtn {
+			color: white;
+			background-color: #1abc9c;
+			width: 60px;
+			height: 35px;
+			border-radius:10px;
+			margin-top: 8px;
+			margin-left: 550px;
+
+		}
+
+		.form-text {
+			border: 15px solid transparent;
+			position: relative;
+			margin-bottom: -15px;
+		}
+
+		.form-text2 {
+			border: 15px solid transparent;
+			margin-bottom: -15px;
+		}
+
+		textarea {
+			width :100%;
+			height: 125px;
+			border-radius: 3px;
+			margin: 5px;
+			margin-left: 0px;
+		}
+
+		#txt2 {
+			height: 100px;
+		}
+
+		.desc {
+			
+		}
+
+		#txt2 {
+			border-style: solid transparent;
+
+		}
+		
+		.dropdown {
+			color: white;
+			background-color: #1abc9c;
+			width: 100%;
+			height: 25px;
+			border-radius:4px;
+			margin-top: 5px;
+			margin-bottom:  5px;
+		}
+
+		#input2 {
+			width: 25%;
+			height: 30px;
+		}
+		
+		.rad {
+			width: 4%;
+			height: 10px;
+		}
+		
+		#choosefile {
+			color: white;
+			width: 500px;
+			height: auto;
+			border:1px gray solid;
+			border-radius:4px;
+			padding:0%;
+
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+<div class="aqua">
+  &nbsp; &nbsp; &nbsp; &nbsp; <span id="header1">TO THE NEW</span>
+<span>
+	Home  &nbsp; &nbsp; Quick Help &nbsp;
+</span>
+<hr>
+</div>
+<form>
+	
+<div>
+
+<div id="bug">
+	<h2>Bug Report</h2><hr>
+</div>
+	<div class="form-text">
+		Title:*
+		<input type="text" name="t1">
+	</div>
+
+	<div class = "form-text2">
+		Description:*
+		<textarea id="txt2"></textarea>
+	</div>
+	<div class="form-text2">
+		Operating system : <br>
+		<select class="dropdown">
+			<option>Windows XP</option>
+			<option>Ubuntu</option>
+			<option>Macintosh</option>
+		</select><br>
+		Product:*<br>
+		<select class="dropdown">
+			<option>Formoid</option>
+			<option>Unknown</option>
+			<option>Out of range</option>
+		</select>		
+	</div>
+
+	<div class="form-text2">
+		Version :*<br>
+		<input id="input2" type="text" name="t2">
+		<br>License:
+		<br><input class="rad" type="radio" name="License" value="free">Free  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input class="rad" type="radio" name="License" value="business">Business
+	</div>
+
+	<div class="form-text2">
+		Severity : <br>
+		<select class="dropdown">
+			<option>Critical</option>
+			<option>Some Issue</option>
+			<option>Out of danger</option>
+		</select>
+	</div>
+
+	<div class="form-text2">
+		Attachments :<br>
+		
+		<input id="choosefile" type="file" name="" placeholder="no file selected" value="No file selected">
+	</div>
+	
+	<div id="bug">
+	<button id="sendbtn" >Send</button>
+	</div>
+</div>
+</form>
+</body>
+</html>
