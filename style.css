@@ -1,0 +1,210 @@
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #f3f3f4;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .side {
+    float: left;
+    width: 17%;
+    height: 700px;
+    background-color: #2f4050;
+  }
+  .side-header {
+    padding: 33px 25px;
+    background-color: #233645;
+    margin-bottom: 10px;
+  }
+  img {
+    border-radius: 50%;
+    border: 1px gray solid;
+  }
+  .side-header p {
+    color: white;
+  }
+  span {
+    margin-right: 10px;
+    color: #2f4050;
+  }
+
+  .bars{
+    float: left;
+    border: none;
+    background-color:#1AB394;
+    color:white;
+    padding: 12px 15px;
+    border-radius: 3px;
+    margin: 12px 12px;
+}
+
+
+    .fa {
+        color: #8c98a9;
+    }
+
+    .fa-bars {
+        color: white;
+    }
+
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: #a7b1c2;
+    font-weight: 600;
+    padding: 14px 20px 14px 25px;
+  }
+  header {
+    float: right;
+    width: 83%;
+    border-bottom: 1px rgb(223, 221, 221) solid;
+    background-color: #f3f3f4;
+  }
+  .dashboard {
+    background-color: white;
+    width: 83%;
+    float: right;
+    padding: 20px;
+  }
+  .mainsection {
+    background-color: #f3f3f4;
+    width: 83%;
+    float: right;
+  }
+  .identity {
+    margin: 30px 15px 30px 30px;
+    background-color: white;
+    width: 60%;
+    height: 300px;
+    float: left;
+  }
+  
+  .asides {
+    margin: 30px 30px 30px 15px;
+    background-color: white;
+    width: 30%;
+    height: 300px;
+    float: right;
+  }
+  
+  input[type="text"] {
+    background-color: #f3f3f4;
+    border: none;
+    padding: 20px;
+    width: 400px;
+    margin: 10px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+  }
+  .navbars {
+    list-style: none;
+    float: right;
+    margin-top: 23px;
+    margin-right: 25px;
+  }
+  
+  .navbars li {
+    display: inline-block;
+  }
+  .navbars li a {
+    text-decoration: none;
+    color: #a7b1c2;
+  }
+  
+  .navbars li a span {
+    color: #a7b1c2;
+  }
+  
+  .dashboard h2 {
+    margin-bottom: 10px;
+    color: grey;
+  }
+  .dashboard p {
+    color: grey;
+  }
+  .identity img {
+    margin: 50px 50px 20px 80px;
+  }
+  .identityleft {
+    color: #676a6c;
+    float: right;
+    margin-top: 50px;
+    margin-right: 150px;
+  }
+  .identityleft ul {
+    margin-top: 20px;
+    list-style: none;
+    line-height: 2;
+  }
+  .imgdown {
+    margin-left: 20px;
+    text-align: center;
+  }
+  .imgdown h5 {
+    color: #676a6c;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  #ha {
+    margin-top: 10px;
+  }
+  #hb {
+    margin-bottom: 10px;
+  }
+  .asides h4 {
+    color: #676a6c;
+    margin: 20px 20px 30px 20px;
+  }
+  
+  .asides p {
+    color: #676a6c;
+  }
+  .asides ul {
+    list-style: none;
+  }
+  .asides h5 {
+    color: #337ab7;
+  }
+  .floatdiv {
+    margin-top: 10px;
+    margin-right: 20px;
+    float: right;
+  }
+  
+  .asides ul li img {
+    margin: 10px 0px 20px 20px;
+  }
+  #change {
+    font-size: 13px;
+  }
+  
+  .progress_bar {
+    width: 25%;
+    height: 5px;
+    background: #f4f4f4;
+    margin-left: 45px;
+    border-radius: 30px;
+  }
+  .progress {
+    width: 85%;
+    background: #56b496;
+    height: inherit;
+    border-radius: 30px;
+  }
+  .contact span{
+    border:1px solid #ddd;
+    font-size:0.8em;
+    padding:2px 4px;
+    margin:0;
+    }
+   
+    #email{
+      margin-left: -5px ;
+    }
