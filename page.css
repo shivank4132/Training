@@ -1,0 +1,45 @@
+.family {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .size {
+    font-size: 18px;
+  }
+  
+  .weight {
+    font-weight: bold;
+  }
+  
+  .all {
+    font: bold 18px Arial, Helvetica, sans-serif;
+  }
+  /* Background Properties */
+  
+  .bground {
+    background: rgb(219, 192, 150);
+    height: 120px;
+    width: 100%;
+  }
+  /* Pseudo selectors (before,after, last-child etc) */
+  
+  li:after {
+    content: " - this is after";
+  }
+  
+  ul li:nth-child(even):before {
+    content: "this is before - ";
+  }
+
+
+  /* Combinators-  ( adjacent +  etc) */
+  
+   h4 + p {
+    background-color: rgb(214, 189, 157);
+  }
+  /* 
+  Attributes- selector (text etc) */
+  
+  input[type="text"] {
+    width: 300px;
+    height: 80px;
+  }
