@@ -1,0 +1,153 @@
+.xltext {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* Navbar */
+
+.nav-flex {
+    display: block;
+}
+
+#navbar .logo {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#navbar .logo img {
+    margin: auto;
+}
+
+#navbar .nav-flex .logo .logotext {
+    border: none;
+    padding: none;
+    display: none;
+}
+
+#navbar ul {
+    display: block;
+    text-align: center;
+}
+
+#navbar ul li {
+    display: block;
+    padding: 2rem;
+    border-bottom: 1px solid #f6f8fb;
+}
+
+#navbar ul li:first-child {
+    margin-left: 3rem;
+}
+
+#navbar ul li a {
+    font-size: 1.5rem;
+}
+
+/* Featured videos */
+
+.featured .videos {
+    display: block;
+    padding: 1rem;
+}
+
+.featured .videos .mainvid .mainvid-img {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.featured .videos .thumbs .thumb {
+    width: 100%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.featured .videos .mainvid span{
+    padding: 1rem;
+    top: 25%;
+    left: 25%;
+    height: 5rem;
+}
+
+.featured .videos .mainvid .play-btn{
+    left: 20%;
+    bottom: 55%;
+}
+
+/* Partners */
+
+.partners .partners-flex .partners-img {
+    padding: 1rem;
+}
+
+.partners .partners-flex .partners-img img {
+    width: 33%;
+    height: auto;
+    padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .partners .partners-flex .partners-img img {
+        width: 50%;
+    }
+
+    .contact .contact-flex{
+        display: block;
+        text-align: center;
+    }
+    
+    .contact .contact-flex .contact-form form {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .contact .contact-flex .contact-form form .form-group{
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .contact .contact-flex .contact-form form .form-group textarea, .contact .contact-flex .contact-form form .form-group input {
+        width: 100%;
+    }
+
+    .contact .contact-flex .contact-form form .form-group textarea{
+        height: 10rem;
+    }
+
+    .contact .contact-flex .contact-form form .form-group:nth-child(4), .contact .contact-flex .contact-form form .form-group:nth-child(5){
+        width: 100%;
+    }
+
+    .contact .contact-flex .button-main{
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+footer .footer-flex .footer-top{
+    display: block;
+    text-align: center;
+}
+
+footer .footer-flex .footer-bottom{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .footer-flex .footer-bottom .footer-bottom-left{
+    order: 2;
+}
+
+footer .footer-flex .footer-bottom .footer-bottom-right{
+    order: 1;
+    margin-bottom: 1rem;
+}
+
+footer .footer-flex .footer-bottom .footer-bottom-right p:first-child{
+    margin-bottom: 0.5rem;
+}
+
+footer .footer-flex .footer-bottom .footer-bottom-right .xltext{
+    margin-bottom: 0.2rem;
+}
