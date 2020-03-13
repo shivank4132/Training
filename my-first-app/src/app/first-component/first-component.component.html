@@ -1,0 +1,6 @@
+<p>first-component works!</p>
+
+<input type = "text" [(ngModel)]='username' (ngModelChange)="updatebool()"/>
+<button [disabled]="disablebutton" (click)=update()>Clear</button>
+
+<p>Username :  {{username}}</p>
