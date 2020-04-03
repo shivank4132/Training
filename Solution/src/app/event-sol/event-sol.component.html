@@ -1,0 +1,19 @@
+<h3>Event Binding solution</h3>
+
+
+
+<button class="btn btn-primary" (click)="myClickFunction($event)">
+    Click Me
+ </button>
+<br>
+ 
+ <input type="text" (keyup)=myKeyUpFunction($event) (keypress)=myKeyUpFunction($event) (keydown)=myKeyUpFunction($event) placeholder="input here">
+ <p>P.S. :- see console for the events.</p>
+
+ <p>The Data from parent to child is '{{data}}' .</p>
+
+
+ <button class="btn btn-primary" (click)="valueChangeFunction()">Click me</button>
+ <p>Check console to check</p>
+
+ <br>
