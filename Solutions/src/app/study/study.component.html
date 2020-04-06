@@ -1,0 +1,13 @@
+<!-- <p>study works!</p>
+<form ngNativeValidate action="">
+<input class="form-control" type="text" placeholder="write your name" [(ngModel)]='naam' required minlength="3">
+ {{naam}}
+<button class="btn btn-primary">Submit</button>
+</form>
+ -->
+<form action="" [formGroup]='newForm'  (ngSubmit)='save()'>
+<label for="name">Name</label> <input type="text" placeholder="Enter Your name" class="form-control" formControlName='name'>
+<label for="email">Email</label> <input type="text" placeholder="Enter your email" class="form-control" formControlName='email'>
+
+<button class="btn btn-primary">Submit</button>
+</form>
