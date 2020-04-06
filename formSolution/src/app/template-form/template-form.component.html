@@ -1,0 +1,61 @@
+<div class="form">
+        <h1>Template Based Form</h1>
+
+        <form (ngSubmit)="formSubmit(fill)" #fill="ngForm">
+            <div class="form-group">
+                <input #email="ngModel" ngModel name="email" type="email" class="form-control" placeholder="Enter email" required
+                    email>
+                <small *ngIf="!email.valid && email.touched">&nbsp;Empty or Invalid email</small>
+            </div>
+            <div class="form-group">
+                <input #pass="ngModel" ngModel name="password" type="password" class="form-control" placeholder="Password"
+                    required minlength="8">
+                <small *ngIf="!pass.valid && pass.touched">&nbsp;Minimum password length is 8</small>
+            </div>
+            <div >
+                <input ngModel name="gender" type="radio" value="Male" required>
+                <label for="male">
+                    Male
+                </label>
+            </div>
+            <div >
+                <input ngModel name="gender" type="radio" value="Female"
+                    required>
+                <label for="female">
+                    Female
+                </label>
+            </div>
+            
+            <div >
+                <label for="City">Select City</label>
+                <select ngModel name="city" class="form-control"required>
+                    <option ngValue="Delhi">Delhi</option>
+                    <option ngValue="Gurgaon ">Gurgaon</option>
+                    <option ngValue="Noida">Noida</option>
+                    <option ngValue="Mumbai">Mumbai</option>
+                </select>
+            </div>
+            <br>
+            <div >
+               
+                    <h4>Upload Image</h4>
+               
+            <div >
+                    <input ngModel name="file" type="file" required>
+                    <label  for="file">Choose file</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!fill.valid">Submit</button>
+        </form>
+
+
+    <div *ngIf="formData">
+        <div>
+            <h2>Your Credentials</h2>
+            <p>Email: {{formData.email}}</p>
+            <p>Password: {{formData.password}}</p>
+            <p>Gender: {{formData.gender}}</p>
+            <p>City: {{formData.city}}</p>
+            <p>FilePath: {{formData.file}}</p>
+        </div>
+    </div>
