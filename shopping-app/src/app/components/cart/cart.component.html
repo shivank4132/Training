@@ -1,0 +1,81 @@
+<section class="cart-head container-fluid">
+  <div class="container">
+    <ul>
+      <li class="active">1. Shopping Cart</li>
+      <li>2. Shipping Details</li>
+      <li>3. Payment Options</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cart container-fluid">
+  <div class="container">
+    <div class="cart-items">
+      <p>
+        Shopping Cart
+      </p>
+      <div *ngFor="let item of cartList; index as i" class="product">
+        <img
+          [src]="item.imageUrl"
+          [routerLink]="['/product-description']"
+          alt=" Product image"
+        />
+        <div class="product-detail">
+          <h4 [routerLink]="['/product-description']">
+            {{ item.name }}
+          </h4>
+          <span>Lorem ipsum dolor sit amet.</span>
+          <span>{{ item.price | currency: "INR" }}</span>
+        </div>
+        <ng-container *ngFor="let item2 of quantityItem; index2 as y">
+          <div class="qty" *ngIf="item.id == item2.id">
+            <span
+              ><select name="model" id="model">
+                <option value="default">Select Model</option>
+                <option value="Simple">Simple</option>
+                <option value="advanced">Advanced</option>
+              </select></span
+            >
+            <span>
+              <label for="quantity">Quantity </label>
+              <input
+                type="number"
+                min="1"
+                max="5"
+                [(ngModel)]="item2.quantity"
+                value="1"
+              />
+            </span>
+          </div>
+          <div class="remove">
+            <a href="">X</a>
+          </div>
+        </ng-container>
+      </div>
+      <div class="btns">
+        <button routerLink="/ship" class="next btn">Next</button>
+        <button routerLink="/home" class="Cancel btn">Cancel</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <p>Summary</p>
+
+      <input type="text" placeholder="ENTER COUPON CODE" />
+
+      <div class="cart-total">
+        <div class="total">
+          <span>SUBTOTAL</span
+          ><span>{{ getTotalPrice() | currency: "INR" }}</span>
+        </div>
+        <div class="total"><span>SHIPPING</span><span>FREE</span></div>
+        <div class="total">
+          <span>TAXES</span><span>{{ totalprice / 50 | currency: "INR" }}</span>
+        </div>
+      </div>
+      <div class="total final-total">
+        <span>TOTAL</span>
+        <span>{{ totalprice + totalprice / 50 | currency: "INR" }}</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+<section class="product-info container-fluid">
+  <div class="container">
+    <div class="img-div">
+      <img [src]="products.imageUrl" alt="Product - image" />
+    </div>
+    <div class="product-describe">
+      <h2 class="title">
+        {{ products.name }}
+      </h2>
+      <p class="ratings">
+        &#9733;&#9733;&#9733;&#9734;&#9734; <span> 5 reviews</span>
+      </p>
+
+      <p class="price-model">
+        {{ products.price | currency: "INR" }}
+        <span
+          ><select name="model" id="model">
+            <option value="default">Select Model</option>
+            <option value="Simple">Simple</option>
+            <option value="advanced">Advanced</option>
+          </select></span
+        >
+      </p>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, lorem consectetur adipisicing elit. Magni,
+        rerum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Incidunt, provident! Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Consequuntur, error.
+      </p>
+      <button class="go-cart" (click)="addCartProduct(products.id)">
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</section>
+<section class="reviews container-fluid">
+  <div class="container">
+    <h2>Reviews</h2>
+    <div class="person-review">
+      <div class="person">
+        <i class="fas fa-user"></i>
+        <div class="user-data">
+          <p class="name">John Doe</p>
+          <p class="date">April 10, 2020</p>
+          <p class="review-rating">
+            &#9733;&#9733;&#9733;&#9734;&#9734;
+          </p>
+        </div>
+      </div>
+      <div class="review-data">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusamus
+        necessitatibus cumque nisi expedita non natus culpa iusto vero fugiat
+        debitis repellendus qui asperiores ducimus sunt, ut, amet laudantium,
+        dolores ipsam aperiam. Dignissimos ut maiores minus adipisci temporibus,
+        inventore eius!
+      </div>
+    </div>
+
+    <div class="person-review">
+      <div class="person">
+        <i class="fas fa-user"></i>
+        <div class="user-data">
+          <p class="name">John Doe</p>
+          <p class="date">April 10, 2020</p>
+          <p class="review-rating">
+            &#9733;&#9733;&#9733;&#9734;&#9734;
+          </p>
+        </div>
+      </div>
+      <div class="review-data">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusamus
+        necessitatibus cumque nisi expedita non natus culpa iusto vero fugiat
+        debitis repellendus qui asperiores ducimus sunt, ut, amet laudantium,
+        dolores ipsam aperiam. Dignissimos ut maiores minus adipisci temporibus,
+        inventore eius!
+      </div>
+    </div>
+  </div>
+</section>

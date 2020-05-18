@@ -1,0 +1,190 @@
+.cart-head {
+  background: #f3f3f3;
+  .container {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      list-style: none;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      padding: 0 2rem;
+      .active {
+        color: dimgray;
+        border-bottom-color: dimgray;
+      }
+      li {
+        text-align: center;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 1rem;
+        color: lightgray;
+      }
+    }
+  }
+}
+
+.container-fluid {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.payment {
+  background: #fff;
+  .container {
+    padding: 2rem;
+    grid-template-columns: 6fr 2fr;
+    grid-gap: 3rem;
+    p {
+      border-bottom: 2px solid lightgray;
+      font-size: 1.7rem;
+      font-weight: 100;
+      color: var(--gray-color);
+      padding-bottom: 0.7rem;
+    }
+    .payment-details {
+      .credit-card {
+        border-bottom: 2px solid lightgray;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+
+        .cc-name {
+          display: grid;
+          gap: 1rem;
+          padding: 1.5rem;
+          border: 1px solid lightgray;
+          .rad {
+            display: grid;
+            grid-template-columns: 1fr 19fr;
+            gap: 0.7rem;
+            color: var(--gray-color);
+
+            input {
+              margin: auto;
+            }
+            div {
+              p {
+                font-size: 0.8rem;
+                border: none;
+                padding: 0.3rem 0;
+              }
+            }
+          }
+          .card-details {
+            display: grid;
+            grid-template-columns: 8fr 1fr 1fr;
+            gap: 1rem;
+          }
+          input {
+            height: 30px;
+            padding: 0.2rem 1rem;
+          }
+        }
+      }
+
+      .paypal {
+        padding-bottom: 2rem;
+        border-bottom: 2px solid lightgray;
+        &-card {
+          display: grid;
+          grid-template-columns: 1fr 10fr 4fr;
+
+          margin-top: 2rem;
+          padding: 1.5rem;
+          border: 1px solid lightgray;
+          color: var(--gray-color);
+          p {
+            font-size: 0.8rem;
+            border: none;
+            padding: 0.3rem 0;
+          }
+          input {
+            margin: auto;
+          }
+          .paypal-logo {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            margin: auto;
+            em {
+              margin: auto;
+              h3 {
+                span {
+                  color: rgb(168, 166, 166);
+                }
+              }
+            }
+          }
+        }
+      }
+      .btns {
+        margin-top: 1rem;
+        .btn {
+          width: 140px;
+          padding: 0.4rem;
+          margin-right: 0.7rem;
+          border: none;
+        }
+        .next {
+          color: #fff;
+          background: var(--gray-color);
+        }
+      }
+    }
+    .cart-summary {
+      input {
+        width: 100%;
+        border: none;
+        margin-top: 0.5rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 2px solid lightgray;
+      }
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0.7rem;
+        color: var(--gray-color);
+        border-bottom: 2px solid lightgray;
+        padding-bottom: 1rem;
+
+        margin-top: 1.5rem;
+        img {
+          width: 100px;
+          height: 70px;
+          border: 1px solid lightgray;
+        }
+        h4 {
+          font-weight: 100;
+          margin-bottom: 0.5rem;
+        }
+        span {
+          font-weight: 100;
+        }
+      }
+      .cart-total {
+        margin-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        display: grid;
+        gap: 0.7rem;
+        color: var(--gray-color);
+        font-weight: 100;
+        font-size: 0.8rem;
+        border-bottom: 2px solid lightgray;
+      }
+      .total {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-gap: 5rem;
+        span {
+          &:nth-child(2) {
+            margin: auto;
+            margin-right: 0;
+          }
+        }
+      }
+      .final-total {
+        margin-top: 0.9rem;
+        color: var(--gray-color);
+        font-weight: 100;
+      }
+    }
+  }
+}

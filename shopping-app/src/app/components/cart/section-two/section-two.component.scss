@@ -1,0 +1,195 @@
+.cart-head {
+  background: #f3f3f3;
+  .container {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      list-style: none;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      padding: 0 2rem;
+      .active {
+        color: dimgray;
+        border-bottom-color: dimgray;
+      }
+      li {
+        text-align: center;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 1rem;
+        color: lightgray;
+      }
+    }
+  }
+}
+
+.container-fluid {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.cart {
+  background: #fff;
+  .container {
+    padding: 2rem;
+    grid-template-columns: 6fr 2fr;
+    grid-gap: 3rem;
+    p {
+      border-bottom: 2px solid lightgray;
+      font-size: 1.7rem;
+      font-weight: 100;
+      color: var(--gray-color);
+      padding-bottom: 0.7rem;
+    }
+    .cart-items {
+      .form-details {
+        form {
+          margin-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          border-bottom: 2px solid lightgray;
+          display: grid;
+          grid-template-areas:
+            "firstName secondName"
+            "address1 address1"
+            "address2 address2"
+            "country city"
+            "zip phone";
+          gap: 1.5rem;
+          input {
+            padding: 0.3rem;
+          }
+          select {
+            background: transparent;
+            padding: 0.3rem;
+            color: var(--gray-color);
+          }
+          .firstName {
+            grid-area: firstName;
+          }
+          .secondName {
+            grid-area: secondName;
+          }
+          .address1 {
+            grid-area: address1;
+          }
+          .address2 {
+            grid-area: address2;
+          }
+          .country {
+            grid-area: country;
+          }
+          .city {
+            grid-area: city;
+          }
+          .zip {
+            grid-area: zip;
+          }
+          .phone {
+            grid-area: phone;
+          }
+        }
+
+        .delivery-type {
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: repeat(2, 1fr);
+          color: var(--gray-color);
+          margin-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          border-bottom: 2px solid lightgray;
+          .free,
+          .not-free {
+            display: grid;
+            grid-template-columns: 1fr 10fr;
+            gap: 0.2rem;
+            padding: 1.5rem;
+            border: 1px solid lightgray;
+            input {
+              margin: auto;
+            }
+            .label {
+              display: grid;
+              gap: 0.5rem;
+              font-weight: 100;
+            }
+          }
+          .free {
+            background: rgb(236, 235, 235);
+          }
+        }
+      }
+
+      .btns {
+        margin-top: 1rem;
+        .btn {
+          width: 140px;
+          padding: 0.4rem;
+          margin-right: 0.7rem;
+          border: none;
+        }
+        .next {
+          color: #fff;
+          background: var(--gray-color);
+        }
+      }
+    }
+
+    .cart-summary {
+      input {
+        width: 100%;
+        border: none;
+        margin-top: 0.5rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.7rem;
+        border-bottom: 2px solid lightgray;
+      }
+      .product {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0.7rem;
+        color: var(--gray-color);
+        border-bottom: 2px solid lightgray;
+        padding-bottom: 1rem;
+
+        margin-top: 1.5rem;
+        img {
+          width: 100px;
+          height: 70px;
+          border: 1px solid lightgray;
+        }
+        h4 {
+          font-weight: 100;
+          margin-bottom: 0.5rem;
+        }
+        span {
+          font-weight: 100;
+        }
+      }
+      .cart-total {
+        margin-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        display: grid;
+        gap: 0.7rem;
+        color: var(--gray-color);
+        font-weight: 100;
+        font-size: 0.8rem;
+        border-bottom: 2px solid lightgray;
+      }
+      .total {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-gap: 5rem;
+        span {
+          &:nth-child(2) {
+            margin: auto;
+            margin-right: 0;
+          }
+        }
+      }
+      .final-total {
+        margin-top: 0.9rem;
+        color: var(--gray-color);
+        font-weight: 100;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<section class="cart-head container-fluid">
+  <div class="container">
+    <ul>
+      <li>1. Shopping Cart</li>
+      <li class="active">2. Shipping Details</li>
+      <li>3. Payment Options</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cart container-fluid">
+  <div class="container">
+    <div class="cart-items">
+      <p>
+        SHIPPING DETAILS
+      </p>
+      <div class="form-details">
+        <form>
+          <input type="text" class="firstName" placeholder="First Name" />
+          <input type="text" class="secondName" placeholder="Last Name" />
+          <input type="text" class="address1" placeholder="Address" />
+
+          <input type="text" class="address2" placeholder="Address 2" />
+          <select name="" class="country" id="">
+            <option value="">Country</option>
+            <option value="">India</option>
+            <option value="">Canada</option>
+          </select>
+          <input type="text" class="city" placeholder="City" />
+          <input type="text" class="zip" placeholder="Zip/Postal Code" />
+          <input type="text" class="phone" placeholder="Phone Number" />
+        </form>
+
+        <div class="delivery-type">
+          <div class="free">
+            <input type="radio" checked name="" id="" />
+            <div class="label">
+              <label for="">Free Delivery </label>
+
+              <span>Between 2-5 working days</span>
+            </div>
+          </div>
+          <div class="not-free">
+            <input type="radio" name="" id="" />
+            <div class="label">
+              <label for="">Next Day Delivery - $20 </label>
+              <span>24hrs from checkout</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btns">
+        <button routerLink="/payment" class="next btn">Next</button>
+        <button routerLink="/home" class="Cancel btn">Cancel</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <p>Summary</p>
+
+      <div class="product">
+        <img src="product.imageUrl" alt=" Product image" />
+        <div class="product-detail">
+          <h4>
+            Product-Name
+          </h4>
+          <span>$300</span>
+        </div>
+      </div>
+
+      <input type="text" placeholder="ENTER COUPON CODE" />
+
+      <div class="cart-total">
+        <div class="total"><span>SUBTOTAL</span><span>$600</span></div>
+        <div class="total"><span>SHIPPING</span><span>FREE</span></div>
+        <div class="total"><span>TAXES</span><span>$13</span></div>
+      </div>
+      <div class="total final-total">
+        <span>TOTAL</span>
+        <span>$613</span>
+      </div>
+    </div>
+  </div>
+</section>
