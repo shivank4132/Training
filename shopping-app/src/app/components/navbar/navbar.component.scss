@@ -6,7 +6,6 @@
   ul {
     display: flex;
     justify-content: flex-end;
-    margin: 0 1.5rem;
 
     li {
       color: var(--gray-color);
@@ -14,10 +13,10 @@
       padding: 0.2rem 2rem;
       margin: 0.8rem 0.5rem;
       cursor: pointer;
-      ~ li {
-        border-left: 2px solid var(--gray-color);
-        height: 25px;
-      }
+      // ~ li {
+      //   border-left: 2px solid var(--gray-color);
+      //   height: 25px;
+      // }
       &:hover {
         background: var(--gray-color);
         color: #fff;
@@ -28,6 +27,28 @@
       }
       .fas {
         padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .navbar {
+    ul {
+      justify-content: center;
+      li {
+        padding: 0.2rem 1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    ul {
+      justify-content: flex-start;
+      li {
+        padding: 0rem;
+        margin: 0.8rem 0.3rem;
       }
     }
   }

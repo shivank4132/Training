@@ -3,7 +3,7 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 4rem;
+  padding-top: 4rem;
   padding-bottom: 6rem;
 
   p {
@@ -20,7 +20,7 @@
       width: 13rem;
       height: 1px;
       margin: 0 0.5rem;
-      left: 30rem;
+      left: 34rem;
       top: 4rem;
     }
   }
@@ -105,6 +105,7 @@
           .overlay {
             opacity: 1;
             overflow: hidden;
+            transition: all 0.3s ease;
           }
         }
       }
@@ -119,6 +120,121 @@
         p {
           padding-bottom: 0.7rem;
         }
+      }
+      &:hover {
+        transform: translateY(-3px);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 905px) {
+  .product-listing {
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.7rem;
+    }
+  }
+  .search {
+    p {
+      &:after {
+        left: 15rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .search {
+    p {
+      font-size: 2rem;
+      &:after {
+        top: 3rem;
+        left: 10rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .search {
+    p {
+      &:after {
+        left: 15rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 680px) {
+  .search {
+    p {
+      font-size: 1.6rem;
+      &:after {
+        top: 3rem;
+        left: 10rem;
+      }
+    }
+  }
+  .product-listing {
+    .products {
+      .product {
+        .image-container {
+          width: 130px;
+          height: 90px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 593px) {
+  .search {
+    p {
+      font-size: 1.3rem;
+      &:after {
+        top: 2rem;
+        left: 4rem;
+      }
+    }
+  }
+  .product-listing {
+    .products {
+      .product {
+        .image-container {
+          width: 105px;
+          height: 80px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .product-listing {
+    .products {
+      gap: 0.5rem;
+      grid-template-columns: 1fr;
+      .product {
+        .image-container {
+          width: 150px;
+          height: 110px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .search {
+    .search-box {
+      input {
+        width: 80%;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      &:after {
+        top: 3rem;
+        left: 4rem;
+        width: 10rem;
       }
     }
   }

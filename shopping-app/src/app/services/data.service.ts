@@ -131,6 +131,14 @@ export class DataService {
     }
   }
 
+  // removeCartData(id: number) {
+  //   for (const item of this.cartData) {
+  //     if (item.id === id) {
+  //       this.cartData.splice(item.id, 1);
+  //     }
+  //   }
+  // }
+
   getCartData() {
     return this.cartData;
   }

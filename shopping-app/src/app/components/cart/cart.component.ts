@@ -44,5 +44,20 @@ export class CartComponent implements OnInit {
     return this.totalprice;
   }
 
-
+  removeCartData(id: number) {
+    var i = -1;
+    var j = -1;
+    for (const item of this.cartList) {
+      i = i + 1;
+      if (item.id === id) {
+        this.cartList.splice(i, 1);
+      }
+    }
+    for (const item of this.quantityItem) {
+      j = j + 1;
+      if (item.id === id) {
+        this.quantityItem.splice(j, 1);
+      }
+    }
+  }
 }

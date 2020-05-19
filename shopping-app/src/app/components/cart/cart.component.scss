@@ -126,3 +126,13 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .cart {
+    .container {
+      padding: 1rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}

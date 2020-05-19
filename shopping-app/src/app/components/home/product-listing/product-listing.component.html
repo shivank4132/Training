@@ -25,7 +25,11 @@
       rerum?
     </p>
     <div class="products">
-      <div class="product" *ngFor="let product of products; index as i">
+      <div
+        class="product"
+        [routerLink]="['/product-description', product.id]"
+        *ngFor="let product of products; index as i"
+      >
         <div class="image-container">
           <img
             [src]="product.imageUrl"

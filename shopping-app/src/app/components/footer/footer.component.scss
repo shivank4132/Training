@@ -36,3 +36,15 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 400px) {
+  footer {
+    .container {
+      ul {
+        li {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}

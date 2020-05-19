@@ -111,9 +111,11 @@
               gap: 0.5rem;
               font-weight: 100;
             }
-          }
-          .free {
-            background: rgb(236, 235, 235);
+            input[type="radio"]:checked {
+              input ~ div {
+                background: rgb(236, 235, 235);
+              }
+            }
           }
         }
       }
@@ -189,6 +191,46 @@
         margin-top: 0.9rem;
         color: var(--gray-color);
         font-weight: 100;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    .container {
+      padding: 1rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cart {
+    .container {
+      .cart-items {
+        .form-details {
+          form {
+            grid-template-areas:
+              "firstName"
+              "secondName"
+              "address1"
+              "address2"
+              "country"
+              "city"
+              "zip"
+              "phone";
+          }
+          .delivery-type {
+            gap: 1rem;
+
+            .free,
+            .not-free {
+              padding: 0.7rem;
+            }
+          }
+        }
       }
     }
   }

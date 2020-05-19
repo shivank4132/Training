@@ -1,8 +1,8 @@
 <section class="cart-head container-fluid">
   <div class="container">
     <ul>
-      <li class="active">1. Shopping Cart</li>
-      <li>2. Shipping Details</li>
+      <li routerLink="/cart" class="active">1. Shopping Cart</li>
+      <li routerLink="/ship">2. Shipping Details</li>
       <li>3. Payment Options</li>
     </ul>
   </div>
@@ -46,9 +46,9 @@
                 value="1"
               />
             </span>
-          </div>
-          <div class="remove">
-            <a href="">X</a>
+            <div class="remove">
+              <button (click)="removeCartData(item.id)">remove</button>
+            </div>
           </div>
         </ng-container>
       </div>

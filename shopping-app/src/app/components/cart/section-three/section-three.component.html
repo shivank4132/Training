@@ -15,7 +15,7 @@
       <div class="credit-card">
         <div class="cc-name">
           <div class="rad">
-            <input type="radio" name="" id="" />
+            <input type="radio" name="payment-type" id="" />
             <div>
               <label for="credit-card"> Credit Card</label>
               <p class="cc">
@@ -39,7 +39,7 @@
       </div>
       <div class="paypal">
         <div class="paypal-card">
-          <input type="radio" name="" id="" />
+          <input type="radio" name="payment-type" id="" />
           <div class="label">
             <label for="">
               Paypal
@@ -66,26 +66,31 @@
     <div class="cart-summary">
       <p>Summary</p>
 
-      <div class="product">
+      <div *ngFor="let item of cartList" class="product">
         <img src="product.imageUrl" alt=" Product image" />
         <div class="product-detail">
           <h4>
-            Product-Name
+            {{ item.name }}
           </h4>
-          <span>$300</span>
+          <span>{{ item.price }}</span>
         </div>
       </div>
 
       <input type="text" placeholder="ENTER COUPON CODE" />
 
       <div class="cart-total">
-        <div class="total"><span>SUBTOTAL</span><span>$600</span></div>
+        <div class="total">
+          <span>SUBTOTAL</span
+          ><span>{{ getTotalPrice() | currency: "INR" }}</span>
+        </div>
         <div class="total"><span>SHIPPING</span><span>FREE</span></div>
-        <div class="total"><span>TAXES</span><span>$13</span></div>
+        <div class="total">
+          <span>TAXES</span><span>{{ totalprice / 50 | currency: "INR" }}</span>
+        </div>
       </div>
       <div class="total final-total">
         <span>TOTAL</span>
-        <span>$613</span>
+        <span>{{ totalprice + totalprice / 50 | currency: "INR" }}</span>
       </div>
     </div>
   </div>
