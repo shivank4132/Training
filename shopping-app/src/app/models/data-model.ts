@@ -5,6 +5,7 @@ export interface ProductData {
   price: number;
   imageUrl: string;
   disable: boolean;
+  quantity: number;
 }
 
 export interface ShipForm {

@@ -37,11 +37,11 @@
         </div>
         <ng-container *ngFor="let item2 of quantityItem; index2 as y">
           <div class="qty" *ngIf="item.id == item2.id">
-            <span
-              ><select name="model" id="model">
-                <option value="default">Select Model</option>
+            <span>
+              <label for="model">Select Model</label>
+              <select name="model" (input)="model($event, i)" id="model">
                 <option value="Simple">Simple</option>
-                <option value="advanced">Advanced</option>
+                <option value="Advanced">Advanced</option>
               </select></span
             >
             <span>
@@ -50,6 +50,7 @@
                 type="number"
                 min="1"
                 max="5"
+                (input)="getVal($event, i)"
                 [(ngModel)]="item2.quantity"
                 value="1"
               />

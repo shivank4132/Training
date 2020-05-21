@@ -14,15 +14,15 @@ import {
   styleUrls: ['./section-two.component.scss'],
 })
 export class SectionTwoComponent implements OnInit {
-  constructor(private service: DataService, private fb: FormBuilder) {}
   quantityItem: { id: number; price: number; quantity: number }[] = [];
   cartList: ProductData[] = [];
   totalprice: number = 0;
   userForm: FormGroup;
   deliveryPrice = 0;
   code = '';
-
   disc: number = 0;
+
+  constructor(private service: DataService, private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.cartList = this.service.getCartData();
@@ -62,5 +62,13 @@ export class SectionTwoComponent implements OnInit {
       this.disc = this.totalprice * 0.3;
     }
     return this.disc;
+  }
+
+  getVal(val: any, item: any) {
+    for (let i of this.cartList) {
+      if (i.id === item.id) {
+        i.quantity = val.target.value;
+      }
+    }
   }
 }

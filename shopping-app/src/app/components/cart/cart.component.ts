@@ -60,4 +60,31 @@ export class CartComponent implements OnInit {
       }
     }
   }
+
+  model(event: any, i: any) {
+    for (let item of this.cartList) {
+      i.price = item.price;
+      if (item.id === i.id) {
+        if (event.target.value === 'Simple') {
+          i.price = item.price + 50;
+          item.price += 50;
+        } else if (event.target.value === 'Advanced') {
+          i.price = item.price + 100;
+          item.price += 100;
+        }
+      }
+    }
+  }
+
+  getVal(val: any, item: any) {
+    for (let i of this.cartList) {
+      if (i.id === item.id) {
+        for (let j of this.cartList) {
+          if (i.id === j.id) {
+            j.quantity = i.quantity = val.target.value;
+          }
+        }
+      }
+    }
+  }
 }

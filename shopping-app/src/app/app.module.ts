@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProductListingComponent } from './components/home/product-listing/product-listing.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -18,7 +17,6 @@ import { SectionThreeComponent } from './components/cart/section-three/section-t
   declarations: [
     AppComponent,
     NavbarComponent,
-    ProductListingComponent,
     HomeComponent,
     ProductDescriptionComponent,
     FooterComponent,
