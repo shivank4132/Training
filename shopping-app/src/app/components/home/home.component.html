@@ -1,5 +1,60 @@
-<div>
-  <app-product-listing></app-product-listing>
-</div>
+<section class="search container-fluid">
+  <div class="container">
+    <p>
+      Tagline describing your e-shop
+    </p>
+    <div class="search-box">
+      <input
+        type="text"
+        [(ngModel)]="productSearch"
+        (ngModelChange)="getProductsSearched()"
+        placeholder=" Search..."
+      />
+      <!-- <button (click)="getProductsSearched()">Submit</button> -->
+    </div>
+  </div>
+</section>
 
-
+<section class="product-listing container-fluid">
+  <div *ngIf="products.length === 0" class="not-found">
+    <h3>*No Products found for your search*</h3>
+  </div>
+  <div *ngIf="products.length > 0" class="container">
+    <h2>
+      Product Listing
+    </h2>
+    <p class="lead">
+      Lorem ipsum dolor sit amet, lorem consectetur adipisicing elit. Magni,
+      rerum?
+    </p>
+    <div class="products">
+      <div class="product" *ngFor="let product of products; index as i">
+        <div class="image-container">
+          <img
+            src="{{ product.imageUrl }}"
+            [routerLink]="['/product-description', product.id]"
+            alt=" Product image"
+          />
+          <div class="overlay">
+            <button
+              [disabled]="product.disable"
+              (click)="addCartProduct(product.id); product.disable = true"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div
+          [routerLink]="['/product-description', product.id]"
+          class="product-detail"
+        >
+          <h4 [routerLink]="['/product-description', product.id]">
+            {{ product.name }}
+          </h4>
+          <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          <p>{{ product.price | currency: "INR" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

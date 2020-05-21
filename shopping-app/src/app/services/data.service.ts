@@ -12,14 +12,16 @@ export class DataService {
       name: 'Headphones',
       rating: 3,
       price: 3000,
-      imageUrl: 'src/app/assets/img/product1.png',
+      imageUrl: '/src/app/assets/img/product1.png',
+      disable: false,
     },
     {
       id: 2,
       name: 'Watch',
       rating: 3,
       price: 2500,
-      imageUrl: '../assets/img/product2.jpeg',
+      imageUrl: '../../../assets/img/product2.jpeg',
+      disable: false,
     },
     {
       id: 3,
@@ -27,6 +29,7 @@ export class DataService {
       rating: 3,
       price: 4000,
       imageUrl: '../assets/img/product3.jpg',
+      disable: false,
     },
     {
       id: 4,
@@ -34,6 +37,7 @@ export class DataService {
       rating: 3,
       price: 1500,
       imageUrl: '../assets/img/product4.jpeg',
+      disable: false,
     },
     {
       id: 5,
@@ -41,6 +45,7 @@ export class DataService {
       rating: 3,
       price: 8000,
       imageUrl: '../assets/img/product5.jpeg',
+      disable: false,
     },
     {
       id: 6,
@@ -48,6 +53,7 @@ export class DataService {
       rating: 3,
       price: 10000,
       imageUrl: '../assets/img/product6.jpeg',
+      disable: false,
     },
     {
       id: 7,
@@ -55,6 +61,7 @@ export class DataService {
       rating: 3,
       price: 3500,
       imageUrl: '../assets/img/product7.jpeg',
+      disable: false,
     },
     {
       id: 8,
@@ -62,6 +69,7 @@ export class DataService {
       rating: 3,
       price: 2500,
       imageUrl: '../assets/img/product8.jpeg',
+      disable: false,
     },
     {
       id: 9,
@@ -69,6 +77,7 @@ export class DataService {
       rating: 3,
       price: 1000,
       imageUrl: '../assets/img/product9.jpeg',
+      disable: false,
     },
     {
       id: 10,
@@ -76,6 +85,7 @@ export class DataService {
       rating: 3,
       price: 2000,
       imageUrl: '../assets/img/product10.jpeg',
+      disable: false,
     },
     {
       id: 11,
@@ -83,6 +93,7 @@ export class DataService {
       rating: 3,
       price: 1200,
       imageUrl: '../assets/img/product11.jpeg',
+      disable: false,
     },
     {
       id: 12,
@@ -90,12 +101,14 @@ export class DataService {
       rating: 3,
       price: 4500,
       imageUrl: '../assets/img/product12.jpeg',
+      disable: false,
     },
   ];
   productsList: ProductData[] = [];
   searchitems: string;
 
   cartData: ProductData[] = [];
+
   constructor() {}
 
   getproducts(searchitems: string): ProductData[] {

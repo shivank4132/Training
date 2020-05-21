@@ -15,50 +15,66 @@
         SHIPPING DETAILS
       </p>
       <div class="form-details">
-        <form>
+        <form [formGroup]="userForm">
           <input
             type="text"
-            required
             class="firstName"
             placeholder="First Name"
+            formControlName="firstName"
           />
           <input
             type="text"
-            required
             class="secondName"
             placeholder="Last Name"
+            formControlName="secondName"
           />
-          <input type="text" class="address1" placeholder="Address" required />
+          <input
+            type="text"
+            formControlName="address1"
+            class="address1"
+            placeholder="Address"
+          />
 
           <input
             type="text"
+            formControlName="address2"
             class="address2"
             placeholder="Address 2"
-            required
           />
-          <select name="" class="country" id="" required>
+          <select name="" class="country" id="">
             <option value="">Country</option>
             <option value="">India</option>
             <option value="">Canada</option>
           </select>
-          <input type="text" class="city" required placeholder="City" />
+          <input
+            type="text"
+            formControlName="city"
+            class="city"
+            placeholder="City"
+          />
           <input
             type="text"
             class="zip"
-            required
+            formControlName="zip"
             placeholder="Zip/Postal Code"
           />
           <input
             type="text"
             class="phone"
-            required
+            formControlName="phone"
             placeholder="Phone Number"
           />
         </form>
 
         <div class="delivery-type">
           <div class="free">
-            <input type="radio" checked name="delivery" id="" />
+            <input
+              type="radio"
+              checked
+              (click)="deliveryPrice = 0"
+              name="delivery"
+              id=""
+            />
             <div class="label">
               <label for="">Free Delivery </label>
 
@@ -66,16 +82,29 @@
             </div>
           </div>
           <div class="not-free">
-            <input type="radio" name="delivery" id="" />
+            <input
+              type="radio"
+              (click)="deliveryPrice = 50"
+              name="delivery"
+              id=""
+            />
             <div class="label">
-              <label for="">Next Day Delivery - $20 </label>
+              <label for=""
+                >Next Day Delivery - {{ 50 | currency: "INR" }}
+              </label>
               <span>24hrs from checkout</span>
             </div>
           </div>
         </div>
       </div>
       <div class="btns">
-        <button type="submit" routerLink="/payment" class="next btn">
+        <button
+          type="submit"
+          routerLink="/payment"
+          (click)="submitForm()"
+          [disabled]="userForm.invalid"
+          class="next btn"
+        >
           Next
         </button>
         <button routerLink="/home" class="Cancel btn">Cancel</button>
@@ -94,21 +123,35 @@
         </div>
       </div>
 
-      <input type="text" placeholder="ENTER COUPON CODE" />
+      <div class="voucher">
+        <input type="text" placeholder="HAVE A VOUCHER" [(ngModel)]="code" />
+        <button class="apply-code" (click)="applyCode(code)">APPLY CODE</button>
+      </div>
 
       <div class="cart-total">
         <div class="total">
           <span>SUBTOTAL</span
           ><span>{{ getTotalPrice() | currency: "INR" }}</span>
         </div>
-        <div class="total"><span>SHIPPING</span><span>FREE</span></div>
+        <div class="total" *ngIf="deliveryPrice === 0">
+          <span>SHIPPING</span><span>FREE</span>
+        </div>
+        <div class="total" *ngIf="deliveryPrice > 0">
+          <span>SHIPPING</span
+          ><span>{{ deliveryPrice | currency: "INR" }}</span>
+        </div>
+        <div class="total" *ngIf="disc > 0">
+          <span>DISCOUNT</span><span>{{ disc | currency: "INR" }}</span>
+        </div>
         <div class="total">
           <span>TAXES</span><span>{{ totalprice / 50 | currency: "INR" }}</span>
         </div>
       </div>
       <div class="total final-total">
         <span>TOTAL</span>
-        <span>{{ totalprice + totalprice / 50 | currency: "INR" }}</span>
+        <span>{{
+          totalprice + totalprice / 50 + deliveryPrice - disc | currency: "INR"
+        }}</span>
       </div>
     </div>
   </div>

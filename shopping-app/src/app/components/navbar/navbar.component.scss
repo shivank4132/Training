@@ -1,32 +1,66 @@
+@keyframes nav-bar-animation {
+  from {
+    left: -1500px;
+  }
+  to {
+    left: 0;
+  }
+}
+
 .navbar {
-  background: #f5f5f5;
+  background: #eee7d7;
 
   margin-bottom: 0;
+  
 
-  ul {
-    display: flex;
-    justify-content: flex-end;
-
-    li {
-      color: var(--gray-color);
-      list-style: none;
-      padding: 0.2rem 2rem;
-      margin: 0.8rem 0.5rem;
-      cursor: pointer;
-      // ~ li {
-      //   border-left: 2px solid var(--gray-color);
-      //   height: 25px;
+  .container {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      animation: nav-bar-animation 3s ease-in-out;
+      // .active {
+      //   color: #f38434;
       // }
-      &:hover {
-        background: var(--gray-color);
-        color: #fff;
-        transition: all 0.5s ease;
-      }
-      &:first-child {
-        height: 25px;
-      }
-      .fas {
-        padding: 0 0.5rem;
+
+      li {
+        color: var(--dark-gray-color);
+        list-style: none;
+        padding: 0.2rem 2rem;
+        margin: 0.8rem 0.5rem;
+        cursor: pointer;
+        // ~ li {
+        //   border-left: 2px solid var(--gray-color);
+        //   height: 25px;
+        // }
+        &:hover {
+          background: var(--gray-color);
+          color: #fff;
+          transition: all 0.5s ease;
+          transform: translateY(-3px);
+        }
+        &:first-child {
+          height: 25px;
+        }
+        .fas {
+          padding: 0 0.5rem;
+        }
+        &:last-child {
+          position: relative;
+          span {
+            padding: 0.1rem;
+            border: 1px solid var(--gray-color);
+            border-radius: 50%;
+            position: absolute;
+            font-size: 0.9rem;
+            left: 1.9rem;
+            top: -0.2rem;
+          }
+          &:hover {
+            span {
+              border: none;
+            }
+          }
+        }
       }
     }
   }
@@ -34,21 +68,42 @@
 
 @media only screen and (max-width: 786px) {
   .navbar {
-    ul {
-      justify-content: center;
-      li {
-        padding: 0.2rem 1rem;
+    .container {
+      ul {
+        justify-content: center;
+        li {
+          padding: 0.2rem 1rem;
+          &:last-child {
+            span {
+              left: 0.9rem;
+              top: -0.2rem;
+            }
+          }
+        }
       }
     }
   }
 }
 @media only screen and (max-width: 576px) {
   .navbar {
-    ul {
-      justify-content: flex-start;
-      li {
-        padding: 0rem;
-        margin: 0.8rem 0.3rem;
+    .container {
+      ul {
+        justify-content: center;
+        li {
+          padding: 0rem;
+          margin: 0.8rem 0.4rem;
+          .fas {
+            padding: 0 0.2rem;
+          }
+          &:last-child {
+            span {
+              padding: 0.1rem;
+              font-size: 0.8rem;
+              left: -0.3rem;
+              top: -0.2rem;
+            }
+          }
+        }
       }
     }
   }

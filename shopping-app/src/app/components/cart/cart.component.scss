@@ -11,12 +11,14 @@
       .active {
         color: dimgray;
         border-bottom-color: dimgray;
+        transition: all 1s ease;
       }
       li {
         text-align: center;
         border-bottom: 1px solid lightgray;
         padding-bottom: 1rem;
         color: lightgray;
+        cursor: pointer;
       }
     }
   }
@@ -29,7 +31,29 @@
 .cart {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
-  background: #fff;
+  background: url("../../assets/img/pl-bg.jpg") no-repeat center center/cover;
+
+  .cart-empty {
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    h3 {
+      font-size: 3rem;
+      font-weight: 100;
+
+      margin-bottom: 3rem;
+    }
+    .continue-shop {
+      padding: 0.7rem 2rem;
+      color: #fff;
+      background: var(--gray-color);
+      border: none;
+      font-weight: 100;
+      letter-spacing: 1px;
+      margin-left: 6rem;
+    }
+  }
+
   .container {
     padding: 2rem;
     grid-template-columns: 6fr 2fr;
@@ -50,14 +74,14 @@
         border-bottom: 2px solid lightgray;
         padding-bottom: 1.3rem;
         img {
-          border: 1px solid lightgray;
+          border: 1px solid var(--gray-color);
           width: 150px;
           height: 90px;
           position: relative;
         }
         &-detail {
           display: grid;
-          color: var(--gray-color);
+          color: var(--dark-gray-color);
           h4 {
             font-weight: 400;
             cursor: pointer;
@@ -65,12 +89,33 @@
         }
         select {
           background: transparent;
-          color: var(--gray-color);
+          color: var(--dark-gray-color);
           padding: 0.3rem;
           width: 150px;
+          margin-bottom: 0.5rem;
         }
         .qty {
           display: grid;
+          span {
+            label {
+              color: var(--dark-gray-color);
+            }
+          }
+        }
+        .remove {
+          button {
+            border: none;
+            padding: 0.2rem 1rem;
+            background: transparent;
+            color: var(--dark-gray-color);
+            margin-top: 0.5rem;
+
+            &:hover {
+              background: red;
+              color: #fff;
+              transition: all 0.5s ease;
+            }
+          }
         }
       }
       .btns {
@@ -102,7 +147,7 @@
         padding-bottom: 0.7rem;
         display: grid;
         gap: 0.7rem;
-        color: var(--gray-color);
+        color: var(--dark-gray-color);
         font-weight: 100;
         font-size: 0.8rem;
         border-bottom: 2px solid lightgray;
@@ -120,7 +165,7 @@
       }
       .final-total {
         margin-top: 0.9rem;
-        color: var(--gray-color);
+        color: var(--dark-gray-color);
         font-weight: 100;
       }
     }

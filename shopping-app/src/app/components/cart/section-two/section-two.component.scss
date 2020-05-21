@@ -11,12 +11,14 @@
       .active {
         color: dimgray;
         border-bottom-color: dimgray;
+        transition: all 1s ease;
       }
       li {
         text-align: center;
         border-bottom: 1px solid lightgray;
         padding-bottom: 1rem;
         color: lightgray;
+        cursor: pointer;
       }
     }
   }
@@ -136,14 +138,6 @@
     }
 
     .cart-summary {
-      input {
-        width: 100%;
-        border: none;
-        margin-top: 0.5rem;
-        padding-top: 0.2rem;
-        padding-bottom: 0.7rem;
-        border-bottom: 2px solid lightgray;
-      }
       .product {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -164,6 +158,23 @@
         }
         span {
           font-weight: 100;
+        }
+      }
+      .voucher {
+        display: flex;
+        border-bottom: 2px solid lightgray;
+        input {
+          width: 70%;
+          border: none;
+          margin-top: 0.5rem;
+          padding-top: 0.2rem;
+          padding-bottom: 0.7rem;
+        }
+        .apply-code {
+          margin: auto;
+
+          border: none;
+          padding: 0.3rem;
         }
       }
       .cart-total {

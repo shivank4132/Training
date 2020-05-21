@@ -1,8 +1,8 @@
 <section class="cart-head container-fluid">
   <div class="container">
     <ul>
-      <li>1. Shopping Cart</li>
-      <li>2. Shipping Details</li>
+      <li routerLink="/cart">1. Shopping Cart</li>
+      <li routerLink="/ship">2. Shipping Details</li>
       <li class="active">3. Payment Options</li>
     </ul>
   </div>
@@ -28,13 +28,30 @@
             <input
               type="text"
               name=""
-              id=""
+              id="card-number"
               placeholder="  0000     0000     0000     0000 "
             />
-            <input type="text" name="" placeholder="  MM/YY" id="" />
-            <input type="text" name="" placeholder="  CVV" id="" />
+            <input
+              type="text"
+              name=""
+              placeholder="  MM/YY"
+              id="card-expiry"
+              class="setWidth"
+            />
+            <input
+              type="text"
+              name=""
+              placeholder="  CVV"
+              id="card=cvv"
+              class="setWidth"
+            />
           </div>
-          <input type="text" name="" placeholder="  Card  Holder  Name" id="" />
+          <input
+            type="text"
+            name=""
+            placeholder="  Card  Holder  Name"
+            id="card-name"
+          />
         </div>
       </div>
       <div class="paypal">

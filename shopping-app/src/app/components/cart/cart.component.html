@@ -2,14 +2,22 @@
   <div class="container">
     <ul>
       <li routerLink="/cart" class="active">1. Shopping Cart</li>
-      <li routerLink="/ship">2. Shipping Details</li>
+      <li routerLink="/ship" [attr.disabled]="cartList.length == 0">
+        2. Shipping Details
+      </li>
       <li>3. Payment Options</li>
     </ul>
   </div>
 </section>
 
 <section class="cart container-fluid">
-  <div class="container">
+  <div *ngIf="cartList.length === 0" class="cart-empty">
+    <h3>
+      *Your Cart is empty*
+    </h3>
+    <button routerLink="/home" class="continue-shop">Continue Shopping</button>
+  </div>
+  <div *ngIf="cartList.length > 0" class="container">
     <div class="cart-items">
       <p>
         Shopping Cart
@@ -47,20 +55,26 @@
               />
             </span>
             <div class="remove">
-              <button (click)="removeCartData(item.id)">remove</button>
+              <button (click)="removeCartData(item.id)">Remove</button>
             </div>
           </div>
         </ng-container>
       </div>
       <div class="btns">
-        <button routerLink="/ship" class="next btn">Next</button>
+        <button
+          routerLink="/ship"
+          [disabled]="cartList.length == 0"
+          class="next btn"
+        >
+          Next
+        </button>
         <button routerLink="/home" class="Cancel btn">Cancel</button>
       </div>
     </div>
     <div class="cart-summary">
       <p>Summary</p>
 
-      <input type="text" placeholder="ENTER COUPON CODE" />
+      <!-- <input type="text" placeholder="ENTER COUPON CODE" pattern="20OFFNOW" /> -->
 
       <div class="cart-total">
         <div class="total">
@@ -68,6 +82,7 @@
           ><span>{{ getTotalPrice() | currency: "INR" }}</span>
         </div>
         <div class="total"><span>SHIPPING</span><span>FREE</span></div>
+
         <div class="total">
           <span>TAXES</span><span>{{ totalprice / 50 | currency: "INR" }}</span>
         </div>
