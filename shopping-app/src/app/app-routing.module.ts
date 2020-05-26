@@ -10,8 +10,9 @@ import { SectionThreeComponent } from './components/cart/section-three/section-t
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '',
     pathMatch: 'full',
+    component:HomeComponent
   },
   {
     path: 'home',

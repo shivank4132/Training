@@ -5,20 +5,21 @@
   margin-bottom: 0;
   padding-top: 4rem;
   padding-bottom: 6rem;
+  background: linear-gradient(palegoldenrod, goldenrod);
 
   p {
-    color: var(--gray-color);
+    color: #fff;
     font-size: 2.5rem;
     position: relative;
-    font-weight: 100;
+    font-weight: 500;
     letter-spacing: 2px;
     &:after {
       content: "";
       display: block;
       position: absolute;
-      background: rgb(218, 215, 215);
+      background: darkred;
       width: 13rem;
-      height: 1px;
+      height: 2px;
       margin: 0 0.5rem;
       left: 34rem;
       top: 4rem;
@@ -32,11 +33,14 @@
 
     grid-gap: 0.5rem;
     input {
+      color: darkred;
       width: 350px;
       background: transparent;
-      border: 1px solid lightgray;
+      border: 1px solid darkred;
       padding: 0.7rem;
       &::placeholder {
+        color: darkred;
+        font-size: 1.1rem;
         font-family: FontAwesome;
       }
     }
@@ -141,6 +145,11 @@
       &:hover {
         transform: translateY(-5px);
         transition: all 0.4s ease-in-out;
+        box-shadow: 3px 3px 15px goldenrod, -3px -3px 15px goldenrod;
+        .image-container {
+          border: none;
+          border-right: 1px solid var(--gray-color);
+        }
       }
     }
   }

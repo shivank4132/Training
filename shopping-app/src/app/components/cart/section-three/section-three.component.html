@@ -25,26 +25,28 @@
             </div>
           </div>
           <div class="card-details">
-            <input
-              type="text"
-              name=""
-              id="card-number"
-              placeholder="  0000     0000     0000     0000 "
-            />
-            <input
-              type="text"
-              name=""
-              placeholder="  MM/YY"
-              id="card-expiry"
-              class="setWidth"
-            />
-            <input
-              type="text"
-              name=""
-              placeholder="  CVV"
-              id="card=cvv"
-              class="setWidth"
-            />
+            <form>
+              <input
+                type="text"
+                name=""
+                id="card-number"
+                placeholder="  0000     0000     0000     0000 "
+              />
+              <input
+                type="text"
+                name=""
+                placeholder="  MM/YY"
+                id="card-expiry"
+                class="setWidth"
+              />
+              <input
+                type="text"
+                name=""
+                placeholder="  CVV"
+                id="card=cvv"
+                class="setWidth"
+              />
+            </form>
           </div>
           <input
             type="text"
@@ -82,18 +84,17 @@
     </div>
     <div class="cart-summary">
       <p>Summary</p>
-
-      <div *ngFor="let item of cartList" class="product">
-        <img src="product.imageUrl" alt=" Product image" />
-        <div class="product-detail">
-          <h4>
-            {{ item.name }}
-          </h4>
-          <span>{{ item.price }}</span>
+      <div class="items-list">
+        <div *ngFor="let item of cartList" class="product">
+          <img [src]="item.imageUrl" alt=" Product image" />
+          <div class="product-detail">
+            <h4>
+              {{ item.name }}
+            </h4>
+            <span>{{ item.price | currency: "INR" }}</span>
+          </div>
         </div>
       </div>
-
-      <input type="text" placeholder="ENTER COUPON CODE" />
 
       <div class="cart-total">
         <div class="total">

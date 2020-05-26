@@ -8,10 +8,9 @@
 }
 
 .navbar {
-  background: #eee7d7;
+  background: palegoldenrod;
 
   margin-bottom: 0;
-  
 
   .container {
     ul {
@@ -33,7 +32,7 @@
         //   height: 25px;
         // }
         &:hover {
-          background: var(--gray-color);
+          background: goldenrod;
           color: #fff;
           transition: all 0.5s ease;
           transform: translateY(-3px);
@@ -47,13 +46,15 @@
         &:last-child {
           position: relative;
           span {
-            padding: 0.1rem;
             border: 1px solid var(--gray-color);
             border-radius: 50%;
             position: absolute;
             font-size: 0.9rem;
-            left: 1.9rem;
-            top: -0.2rem;
+            left: 8.9rem;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            align-items: center;
           }
           &:hover {
             span {

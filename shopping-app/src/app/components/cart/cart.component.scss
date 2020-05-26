@@ -31,7 +31,7 @@
 .cart {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
-  background: url("../../assets/img/pl-bg.jpg") no-repeat center center/cover;
+  background: linear-gradient(palegoldenrod, rgb(231, 223, 129), goldenrod);
 
   .cart-empty {
     margin: auto;
@@ -48,9 +48,16 @@
       color: #fff;
       background: var(--gray-color);
       border: none;
-      font-weight: 100;
+      font-weight: 500;
       letter-spacing: 1px;
       margin-left: 6rem;
+      font-size: 1.1rem;
+      &:hover {
+        transform: scale(1.1) translateY(-5px);
+        background: palegoldenrod;
+        color: #333;
+        transition: all 0.5s ease;
+      }
     }
   }
 
@@ -66,70 +73,73 @@
       padding-bottom: 0.7rem;
     }
     .cart-items {
-      .product {
-        display: grid;
-        grid-template-columns: 2fr 5fr 2fr 1fr;
-        margin-top: 1rem;
-        grid-gap: 1rem;
-        border-bottom: 2px solid lightgray;
-        padding-bottom: 1.3rem;
-        img {
-          border: 1px solid var(--gray-color);
-          width: 150px;
-          height: 90px;
-          position: relative;
-        }
-        &-detail {
+      .items-list {
+        height: 350px;
+        overflow-y: scroll;
+        .product {
           display: grid;
-          color: var(--dark-gray-color);
-          h4 {
-            font-weight: 400;
-            cursor: pointer;
+          grid-template-columns: 2fr 5fr 2fr 1fr;
+          margin-top: 1rem;
+          grid-gap: 1rem;
+          border-bottom: 2px solid lightgray;
+          padding-bottom: 1.3rem;
+          img {
+            border: 1px solid var(--gray-color);
+            width: 150px;
+            height: 90px;
+            position: relative;
           }
-        }
-        select {
-          background: transparent;
-          color: var(--dark-gray-color);
-          padding: 0.3rem;
-          width: 150px;
-          margin-bottom: 0.5rem;
-        }
-        .qty {
-          display: grid;
-          span {
-            label {
-              color: var(--dark-gray-color);
+          &-detail {
+            display: grid;
+            color: var(--dark-gray-color);
+            h4 {
+              font-weight: 400;
+              cursor: pointer;
             }
           }
-        }
-        .remove {
-          button {
-            border: none;
-            padding: 0.2rem 1rem;
+          select {
             background: transparent;
             color: var(--dark-gray-color);
-            margin-top: 0.5rem;
-
-            &:hover {
+            padding: 0.3rem;
+            width: 150px;
+            margin-bottom: 0.5rem;
+          }
+          .qty {
+            display: grid;
+            span {
+              label {
+                color: var(--dark-gray-color);
+              }
+            }
+          }
+          .remove {
+            button {
+              border: none;
+              padding: 0.2rem 1rem;
               background: red;
               color: #fff;
-              transition: all 0.5s ease;
+              margin-top: 0.5rem;
+
+              &:hover {
+                transform: scale(0.9);
+                transition: all 0.5s ease;
+              }
             }
           }
         }
       }
-      .btns {
-        margin-top: 1rem;
-        .btn {
-          width: 140px;
-          padding: 0.4rem;
-          margin-right: 0.7rem;
-          border: none;
-        }
-        .next {
-          color: #fff;
-          background: var(--gray-color);
-        }
+    }
+    .btns {
+      margin-top: 1rem;
+      .btn {
+        width: 140px;
+        padding: 0.4rem;
+        margin-right: 0.7rem;
+        border: none;
+      }
+      .next {
+        color: #fff;
+        background: var(--gray-color);
       }
     }
 

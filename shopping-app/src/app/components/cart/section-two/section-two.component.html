@@ -113,13 +113,15 @@
     <div class="cart-summary">
       <p>Summary</p>
 
-      <div *ngFor="let item of cartList" class="product">
-        <img [src]="item.imageUrl" alt=" Product image" />
-        <div class="product-detail">
-          <h4>
-            {{ item.name }}
-          </h4>
-          <span>{{ item.price | currency: "INR" }}</span>
+      <div   class="items-list">
+        <div *ngFor="let item of cartList" class="product">
+          <img [src]="item.imageUrl" alt=" Product image" />
+          <div class="product-detail">
+            <h4>
+              {{ item.name }}
+            </h4>
+            <span>{{ item.price | currency: "INR" }}</span>
+          </div>
         </div>
       </div>
 

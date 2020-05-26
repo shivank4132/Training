@@ -22,54 +22,47 @@
       <p>
         Shopping Cart
       </p>
-      <div *ngFor="let item of cartList; index as i" class="product">
-        <img
-          [src]="item.imageUrl"
-          [routerLink]="['/product-description']"
-          alt=" Product image"
-        />
-        <div class="product-detail">
-          <h4 [routerLink]="['/product-description']">
-            {{ item.name }}
-          </h4>
-          <span>Lorem ipsum dolor sit amet.</span>
-          <span>{{ item.price | currency: "INR" }}</span>
-        </div>
-        <ng-container *ngFor="let item2 of quantityItem; index2 as y">
-          <div class="qty" *ngIf="item.id == item2.id">
-            <span>
-              <label for="model">Select Model</label>
-              <select name="model" (input)="model($event, i)" id="model">
-                <option value="Simple">Simple</option>
-                <option value="Advanced">Advanced</option>
-              </select></span
-            >
-            <span>
-              <label for="quantity">Quantity </label>
-              <input
-                type="number"
-                min="1"
-                max="5"
-                (input)="getVal($event, i)"
-                [(ngModel)]="item2.quantity"
-                value="1"
-              />
-            </span>
-            <div class="remove">
-              <button (click)="removeCartData(item.id)">Remove</button>
-            </div>
+      <div class="items-list">
+        <div *ngFor="let item of cartList; index as i" class="product">
+          <img
+            [src]="item.imageUrl"
+            [routerLink]="['/product-description']"
+            alt=" Product image"
+          />
+          <div class="product-detail">
+            <h4 [routerLink]="['/product-description']">
+              {{ item.name }}
+            </h4>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <span>{{ item.price | currency: "INR" }}</span>
           </div>
-        </ng-container>
-      </div>
-      <div class="btns">
-        <button
-          routerLink="/ship"
-          [disabled]="cartList.length == 0"
-          class="next btn"
-        >
-          Next
-        </button>
-        <button routerLink="/home" class="Cancel btn">Cancel</button>
+          <ng-container *ngFor="let item2 of quantityItem; index2 as y">
+            <div class="qty" *ngIf="item.id == item2.id">
+              <span>
+                <label for="model">Select Model</label>
+                <select name="model" (input)="model($event, i)" id="model">
+                  <option value="none">Simple</option>
+                  <option value="Simple">Advanced</option>
+                  <option value="Pro">Pro</option>
+                </select></span
+              >
+              <span>
+                <label for="quantity">Quantity </label>
+                <input
+                  type="number"
+                  min="1"
+                  max="5"
+                  (input)="getVal($event, i)"
+                  [(ngModel)]="item2.quantity"
+                  value="1"
+                />
+              </span>
+              <div class="remove">
+                <button (click)="removeCartData(item.id)">Remove</button>
+              </div>
+            </div>
+          </ng-container>
+        </div>
       </div>
     </div>
     <div class="cart-summary">
@@ -92,6 +85,16 @@
         <span>TOTAL</span>
         <span>{{ totalprice + totalprice / 50 | currency: "INR" }}</span>
       </div>
+    </div>
+    <div class="btns">
+      <button
+        routerLink="/ship"
+        [disabled]="cartList.length == 0"
+        class="next btn"
+      >
+        Next
+      </button>
+      <button routerLink="/home" class="Cancel btn">Cancel</button>
     </div>
   </div>
 </section>

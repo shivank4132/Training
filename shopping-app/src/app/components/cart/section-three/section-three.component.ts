@@ -17,6 +17,7 @@ export class SectionThreeComponent implements OnInit {
     this.cartList = this.service.getCartData();
     this.getPrice();
   }
+
   getPrice() {
     for (const item of this.cartList) {
       this.quantityItem.push({ id: item.id, price: item.price, quantity: 1 });

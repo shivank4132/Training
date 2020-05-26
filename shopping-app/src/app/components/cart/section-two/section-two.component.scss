@@ -138,26 +138,31 @@
     }
 
     .cart-summary {
-      .product {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 0.7rem;
-        color: var(--gray-color);
-        border-bottom: 2px solid lightgray;
-        padding-bottom: 1rem;
+      .items-list {
+        max-height: 350px;
+        overflow-y: scroll;
+        margin-bottom: 1rem;
+        .product {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 0.7rem;
+          color: var(--gray-color);
+          border-bottom: 2px solid lightgray;
+          padding-bottom: 1rem;
 
-        margin-top: 1.5rem;
-        img {
-          width: 100px;
-          height: 70px;
-          border: 1px solid lightgray;
-        }
-        h4 {
-          font-weight: 100;
-          margin-bottom: 0.5rem;
-        }
-        span {
-          font-weight: 100;
+          margin-top: 1.5rem;
+          img {
+            width: 100px;
+            height: 70px;
+            border: 1px solid lightgray;
+          }
+          h4 {
+            font-weight: 100;
+            margin-bottom: 0.5rem;
+          }
+          span {
+            font-weight: 100;
+          }
         }
       }
       .voucher {

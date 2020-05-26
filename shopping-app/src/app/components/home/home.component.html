@@ -40,7 +40,8 @@
               [disabled]="product.disable"
               (click)="addCartProduct(product.id); product.disable = true"
             >
-              Add to Cart
+              <span *ngIf="product.disable == false">Add to Cart</span>
+              <span *ngIf="product.disable == true">Added to Cart</span>
             </button>
           </div>
         </div>

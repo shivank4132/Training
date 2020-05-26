@@ -27,8 +27,13 @@
         Incidunt, provident! Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Consequuntur, error.
       </p>
-      <button class="go-cart" (click)="addCartProduct(products.id)">
-        Add To Cart
+      <button
+        [disabled]="products.disable"
+        class="go-cart"
+        (click)="addCartProduct(products.id); products.disable = true"
+      >
+        <span *ngIf="products.disable == false">Add to Cart</span>
+        <span *ngIf="products.disable == true">Added to Cart</span>
       </button>
     </div>
   </div>
